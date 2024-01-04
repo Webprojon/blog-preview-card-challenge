@@ -1,0 +1,104 @@
+/* VARIABLES */
+:root {
+  /* Colors */
+  --body-bg: hsl(47, 88%, 63%);
+  --card-bg: hsl(0, 0%, 100%);
+  --text-color-active: hsl(47, 88%, 63%);
+  --border-dark: hsl(0, 0%, 7%);
+  --text-color-darker: rgba(0, 0, 0, 0.6);
+  --text-color-dark: rgba(0, 0, 0, 0.8);
+
+  /* Fonts */
+  --body-font-family: "Figtree", sans-serif;
+}
+
+/* GENERAL CSS */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  background-color: var(--body-bg);
+}
+
+.blog-preview-card_main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-preview_card {
+  width: 22.5rem;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  border: 0.1rem solid var(--border-dark);
+  box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.9);
+}
+
+.blog-preview_card:active {
+  box-shadow: 0.9rem 0.9rem rgba(0, 0, 0, 0.9);
+  transition: all 0.2s linear;
+}
+
+.blog-preview_card:active .card_title {
+  color: var(--text-color-active);
+  transition: all 0.2s linear;
+}
+
+.card_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-detail_el:first-child {
+  background: var(--body-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.card-detail_el:nth-child(2) {
+  color: var(--text-color-dark);
+}
+
+.card_description {
+  color: var(--text-color-darker);
+}
+
+.card_user {
+  display: flex;
+  align-items: center;
+}
+
+.card-user_img {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 0.7rem;
+}
+
+.card-user_name {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 80%;
+  }
+
+  .blog-preview_card {
+    width: 88%;
+  }
+}
