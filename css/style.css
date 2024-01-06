@@ -74,6 +74,10 @@ body {
   color: var(--text-color-dark);
 }
 
+.card_title {
+  font-size: 1.6rem;
+}
+
 .card_description {
   color: var(--text-color-darker);
 }
